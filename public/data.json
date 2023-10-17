@@ -1,0 +1,236 @@
+[
+      {
+            "id": 1,
+            "name": "Toyota",
+            "image": "https://i.ibb.co/Jx40VHp/car-01.jpg",
+            "products": [
+                  {
+                        "product_name": "Corolla",
+                        "product_image": "https://i.ibb.co/tZ0qsvh/car-02.jpg",
+                        "product_description": "Compact car Mercedes-Benz is a renowned luxury automobile manufacturer with a rich history dating back to its founding in 1926. Known for its commitment to engineering excellence and innovation, the brand has consistently produced high-quality vehicles that combine cutting-edge technology with elegant design. Mercedes-Benz offers a wide range of",
+                        "product_price": 25000,
+                        "product_rating": 4.5,
+                        "product_type": "Sedan"
+                  },
+                  {
+                        "product_name": "Camry",
+                        "product_image": "https://i.ibb.co/tZ0qsvh/car-02.jpg",
+                        "product_description": "Midsize car Mercedes-Benz is a renowned luxury automobile manufacturer with a rich history dating back to its founding in 1926. Known for its commitment to engineering excellence and innovation, the brand has consistently produced high-quality vehicles that combine cutting-edge technology with elegant design. Mercedes-Benz offers a wide range of",
+                        "product_price": 35000,
+                        "product_rating": 4.7,
+                        "product_type": "Sedan"
+                  },
+                  {
+                        "product_name": "RAV4",
+                        "product_image": "https://i.ibb.co/Jx40VHp/car-01.jpg",
+                        "product_description": "Compact SUV Mercedes-Benz is a renowned luxury automobile manufacturer with a rich history dating back to its founding in 1926. Known for its commitment to engineering excellence and innovation, the brand has consistently produced high-quality vehicles that combine cutting-edge technology with elegant design. Mercedes-Benz offers a wide range of",
+                        "product_price": 28000,
+                        "product_rating": 4.6,
+                        "product_type": "SUV"
+                  },
+                  {
+                        "product_name": "Highlander",
+                        "product_image": "https://i.ibb.co/tZ0qsvh/car-02.jpg",
+                        "product_description": "Midsize SUV Mercedes-Benz is a renowned luxury automobile manufacturer with a rich history dating back to its founding in 1926. Known for its commitment to engineering excellence and innovation, the brand has consistently produced high-quality vehicles that combine cutting-edge technology with elegant design. Mercedes-Benz offers a wide range of",
+                        "product_price": 38000,
+                        "product_rating": 4.8,
+                        "product_type": "SUV"
+                  }
+            ]
+      },
+      {
+            "id": 2,
+            "name": "Ford",
+            "image": "https://i.ibb.co/tZ0qsvh/car-02.jpg",
+            "products": [
+                  {
+                        "product_name": "Focus",
+                        "product_image": "https://i.ibb.co/GT3bhF4/car-04.jpg",
+                        "product_description": "Compact car Mercedes-Benz is a renowned luxury automobile manufacturer with a rich history dating back to its founding in 1926. Known for its commitment to engineering excellence and innovation, the brand has consistently produced high-quality vehicles that combine cutting-edge technology with elegant design. Mercedes-Benz offers a wide range of",
+                        "product_price": 22000,
+                        "product_rating": 4.4,
+                        "product_type": "Hatchback"
+                  },
+                  {
+                        "product_name": "Fusion",
+                        "product_image": "https://i.ibb.co/GT3bhF4/car-04.jpg",
+                        "product_description": "Midsize car Mercedes-Benz is a renowned luxury automobile manufacturer with a rich history dating back to its founding in 1926. Known for its commitment to engineering excellence and innovation, the brand has consistently produced high-quality vehicles that combine cutting-edge technology with elegant design. Mercedes-Benz offers a wide range of",
+                        "product_price": 32000,
+                        "product_rating": 4.6,
+                        "product_type": "Sedan"
+                  },
+                  {
+                        "product_name": "Escape",
+                        "product_image": "https://i.ibb.co/tZ0qsvh/car-02.jpg",
+                        "product_description": "Compact SUV Mercedes-Benz is a renowned luxury automobile manufacturer with a rich history dating back to its founding in 1926. Known for its commitment to engineering excellence and innovation, the brand has consistently produced high-quality vehicles that combine cutting-edge technology with elegant design. Mercedes-Benz offers a wide range of",
+                        "product_price": 26000,
+                        "product_rating": 4.5,
+                        "product_type": "SUV"
+                  },
+                  {
+                        "product_name": "Explorer",
+                        "product_image": "https://i.ibb.co/tZ0qsvh/car-02.jpg",
+                        "product_description": "Midsize SUV Mercedes-Benz is a renowned luxury automobile manufacturer with a rich history dating back to its founding in 1926. Known for its commitment to engineering excellence and innovation, the brand has consistently produced high-quality vehicles that combine cutting-edge technology with elegant design. Mercedes-Benz offers a wide range of",
+                        "product_price": 36000,
+                        "product_rating": 4.7,
+                        "product_type": "SUV"
+                  }
+            ]
+      },
+      {
+            "id": 3,
+            "name": "Honda",
+            "image": "https://i.ibb.co/GT3bhF4/car-04.jpg",
+            "products": [
+                  {
+                        "product_name": "Civic",
+                        "product_image": "https://i.ibb.co/X7LfHPz/car-4.jpg",
+                        "product_description": "Compact car Mercedes-Benz is a renowned luxury automobile manufacturer with a rich history dating back to its founding in 1926. Known for its commitment to engineering excellence and innovation, the brand has consistently produced high-quality vehicles that combine cutting-edge technology with elegant design. Mercedes-Benz offers a wide range of",
+                        "product_price": 23000,
+                        "product_rating": 4.4,
+                        "product_type": "Sedan"
+                  },
+                  {
+                        "product_name": "Accord",
+                        "product_image": "https://i.ibb.co/GT3bhF4/car-04.jpg",
+                        "product_description": "Midsize car Mercedes-Benz is a renowned luxury automobile manufacturer with a rich history dating back to its founding in 1926. Known for its commitment to engineering excellence and innovation, the brand has consistently produced high-quality vehicles that combine cutting-edge technology with elegant design. Mercedes-Benz offers a wide range of",
+                        "product_price": 33000,
+                        "product_rating": 4.6,
+                        "product_type": "Sedan"
+                  },
+                  {
+                        "product_name": "CR-V",
+                        "product_image": "https://i.ibb.co/X7LfHPz/car-4.jpg",
+                        "product_description": "Compact SUV Mercedes-Benz is a renowned luxury automobile manufacturer with a rich history dating back to its founding in 1926. Known for its commitment to engineering excellence and innovation, the brand has consistently produced high-quality vehicles that combine cutting-edge technology with elegant design. Mercedes-Benz offers a wide range of",
+                        "product_price": 27000,
+                        "product_rating": 4.5,
+                        "product_type": "SUV"
+                  },
+                  {
+                        "product_name": "Pilot",
+                        "product_image": "https://i.ibb.co/GT3bhF4/car-04.jpg",
+                        "product_description": "Midsize SUV Mercedes-Benz is a renowned luxury automobile manufacturer with a rich history dating back to its founding in 1926. Known for its commitment to engineering excellence and innovation, the brand has consistently produced high-quality vehicles that combine cutting-edge technology with elegant design. Mercedes-Benz offers a wide range of",
+                        "product_price": 37000,
+                        "product_rating": 4.7,
+                        "product_type": "SUV"
+                  }
+            ]
+      },
+      {
+            "id": 4,
+            "name": "Chevrolet",
+            "image": "https://i.ibb.co/X7LfHPz/car-4.jpg",
+            "products": [
+                  {
+                        "product_name": "Malibu",
+                        "product_image": "https://i.ibb.co/GT3bhF4/car-04.jpg",
+                        "product_description": "Midsize car Mercedes-Benz is a renowned luxury automobile manufacturer with a rich history dating back to its founding in 1926. Known for its commitment to engineering excellence and innovation, the brand has consistently produced high-quality vehicles that combine cutting-edge technology with elegant design. Mercedes-Benz offers a wide range of",
+                        "product_price": 31000,
+                        "product_rating": 4.6,
+                        "product_type": "Sedan"
+                  },
+                  {
+                        "product_name": "Equinox",
+                        "product_image": "https://i.ibb.co/GT3bhF4/car-04.jpg",
+                        "product_description": "Compact SUV Mercedes-Benz is a renowned luxury automobile manufacturer with a rich history dating back to its founding in 1926. Known for its commitment to engineering excellence and innovation, the brand has consistently produced high-quality vehicles that combine cutting-edge technology with elegant design. Mercedes-Benz offers a wide range of",
+                        "product_price": 27000,
+                        "product_rating": 4.5,
+                        "product_type": "SUV"
+                  },
+                  {
+                        "product_name": "Silverado",
+                        "product_image": "https://i.ibb.co/X7LfHPz/car-4.jpg",
+                        "product_description": "Full-size pickup truck Mercedes-Benz is a renowned luxury automobile manufacturer with a rich history dating back to its founding in 1926. Known for its commitment to engineering excellence and innovation, the brand has consistently produced high-quality vehicles that combine cutting-edge technology with elegant design. Mercedes-Benz offers a wide range of",
+                        "product_price": 36000,
+                        "product_rating": 4.7,
+                        "product_type": "Truck"
+                  },
+                  {
+                        "product_name": "Tahoe",
+                        "product_image": "https://i.ibb.co/GT3bhF4/car-04.jpg",
+                        "product_description": "Full-size SUV Mercedes-Benz is a renowned luxury automobile manufacturer with a rich history dating back to its founding in 1926. Known for its commitment to engineering excellence and innovation, the brand has consistently produced high-quality vehicles that combine cutting-edge technology with elegant design. Mercedes-Benz offers a wide range of",
+                        "product_price": 42000,
+                        "product_rating": 4.8,
+                        "product_type": "SUV"
+                  }
+            ]
+      },
+      {
+            "id": 5,
+            "name": "BMW",
+            "image": "https://i.ibb.co/yhd22p8/car-06.jpg",
+            "products": [
+                  {
+                        "product_name": "3 Series",
+                        "product_image": "https://i.ibb.co/QN1V30P/car-30.jpg",
+                        "product_description": "Compact luxury car Mercedes-Benz is a renowned luxury automobile manufacturer with a rich history dating back to its founding in 1926. Known for its commitment to engineering excellence and innovation, the brand has consistently produced high-quality vehicles that combine cutting-edge technology with elegant design. Mercedes-Benz offers a wide range of",
+                        "product_price": 45000,
+                        "product_rating": 4.7,
+                        "product_type": "Sedan"
+                  },
+                  {
+                        "product_name": "5 Series",
+                        "product_image": "https://i.ibb.co/yhd22p8/car-06.jpg",
+                        "product_description": "Midsize luxury carMercedes-Benz is a renowned luxury automobile manufacturer with a rich history dating back to its founding in 1926. Known for its commitment to engineering excellence and innovation, the brand has consistently produced high-quality vehicles that combine cutting-edge technology with elegant design. Mercedes-Benz offers a wide range of",
+                        "product_price": 55000,
+                        "product_rating": 4.8,
+                        "product_type": "Sedan"
+                  },
+                  {
+                        "product_name": "X3",
+                        "product_image": "https://i.ibb.co/QN1V30P/car-30.jpg",
+                        "product_description": "Luxury compact SUV Mercedes-Benz is a renowned luxury automobile manufacturer with a rich history dating back to its founding in 1926. Known for its commitment to engineering excellence and innovation, the brand has consistently produced high-quality vehicles that combine cutting-edge technology with elegant design. Mercedes-Benz offers a wide range of",
+                        "product_price": 48000,
+                        "product_rating": 4.7,
+                        "product_type": "SUV"
+                  },
+                  {
+                        "product_name": "X5",
+                        "product_image": "https://i.ibb.co/yhd22p8/car-06.jpg",
+                        "product_description": "Luxury midsize SUV Mercedes-Benz is a renowned luxury automobile manufacturer with a rich history dating back to its founding in 1926. Known for its commitment to engineering excellence and innovation, the brand has consistently produced high-quality vehicles that combine cutting-edge technology with elegant design. Mercedes-Benz offers a wide range of",
+                        "product_price": 62000,
+                        "product_rating": 4.8,
+                        "product_type": "SUV"
+                  }
+            ]
+      },
+      {
+            "id": 6,
+            "name": "Mercedes-Benz",
+            "image": "https://i.ibb.co/QN1V30P/car-30.jpg",
+            "products": [
+                  {
+                        "product_name": "C-Class",
+                        "product_image": "https://i.ibb.co/QN1V30P/car-30.jpg",
+                        "product_description": "Mercedes-Benz is a renowned luxury automobile manufacturer with a rich history dating back to its founding in 1926. Known for its commitment to engineering excellence and innovation, the brand has consistently produced high-quality vehicles that combine cutting-edge technology with elegant design. Mercedes-Benz offers a wide range of",
+                        "product_price": 47000,
+                        "product_rating": 4.7,
+                        "product_type": "Sedan"
+                  },
+                  {
+                        "product_name": "E-Class",
+                        "product_image": "https://i.ibb.co/yhd22p8/car-06.jpg",
+                        "product_description": "Midsize luxury car Mercedes-Benz is a renowned luxury automobile manufacturer with a rich history dating back to its founding in 1926. Known for its commitment to engineering excellence and innovation, the brand has consistently produced high-quality vehicles that combine cutting-edge technology with elegant design. Mercedes-Benz offers a wide range of",
+                        "product_price": 57000,
+                        "product_rating": 4.8,
+                        "product_type": "Sedan"
+                  },
+                  {
+                        "product_name": "GLC",
+                        "product_image": "https://i.ibb.co/yhd22p8/car-06.jpg",
+                        "product_description": "Mercedes-Benz is a renowned luxury automobile manufacturer with a rich history dating back to its founding in 1926. Known for its commitment to engineering excellence and innovation, the brand has consistently produced high-quality vehicles that combine cutting-edge technology with elegant design. Mercedes-Benz offers a wide range of",
+                        "product_price": 50000,
+                        "product_rating": 4.7,
+                        "product_type": "SUV"
+                  },
+                  {
+                        "product_name": "GLE",
+                        "product_image": "https://i.ibb.co/QN1V30P/car-30.jpg",
+                        "product_description": "Luxury midsize SUV Mercedes-Benz is a renowned luxury automobile manufacturer with a rich history dating back to its founding in 1926. Known for its commitment to engineering excellence and innovation, the brand has consistently produced high-quality vehicles that combine cutting-edge technology with elegant design. Mercedes-Benz offers a wide range of",
+                        "product_price": 65000,
+                        "product_rating": 4.8,
+                        "product_type": "SUV"
+                  }
+            ]
+      }
+]
