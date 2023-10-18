@@ -28,7 +28,7 @@ const AddProduct = () => {
                               if (data.insertedId) {
                                     Swal.fire({
                                           title: 'success!',
-                                          text: 'Coffee added Successfully',
+                                          text: 'Product added Successfully',
                                           icon: 'success',
                                           confirmButtonText: 'Cool'
                                     })
@@ -37,7 +37,7 @@ const AddProduct = () => {
                               else {
                                     Swal.fire({
                                           title: 'error!',
-                                          text: 'Coffee do not added',
+                                          text: 'Product do not added',
                                           icon: 'error',
                                           confirmButtonText: 'Try Agin'
                                     })

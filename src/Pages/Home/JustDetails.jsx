@@ -25,8 +25,8 @@ const JustDetails = () => {
 
       }, [])
       return (
-            <div>
-                  {product.name}
+            <div className='mt-[100px] mb-[100px]'>
+                 
 
                   <div className="card card-compact w-1/2 mx-auto bg-pink-200 shadow-xl">
                         <figure><img className='w-full' src={image} alt="Shoes" /></figure>

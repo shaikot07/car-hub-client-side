@@ -34,16 +34,16 @@ const BrandDetailsCard = ({ products }) => {
                                           type="button"
                                           data-ripple-light="true"
                                     >
-                                          Details button
+                                          Details 
                                     </button>
                               </Link>
-                              <Link>
+                              <Link to={`/updateproduct/${_id}`}>
                                     <button
                                           className="select-none ml-3 rounded-lg bg-pink-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                                           type="button"
                                           data-ripple-light="true"
                                     >
-                                          Update button
+                                          Update product
                                     </button>
                               </Link>
                         </div>

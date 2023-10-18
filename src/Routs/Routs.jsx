@@ -11,6 +11,7 @@ import PrivateRoute from './PrivateRoute';
 import ErrorPage from '../Sheard/ErrorPage';
 import BrandDetails from '../Pages/Home/Brand-info/BrandDetails';
 import JustDetails from '../Pages/Home/JustDetails';
+import UpdateProduct from '../Pages/updateProduct/UpdateProduct';
 
 const router = createBrowserRouter([
       {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
                   {
                         path:'/details/:id',
                         element:<JustDetails></JustDetails>
+                  },
+                  {
+                        path:'/updateproduct/:id',
+                        element:<UpdateProduct></UpdateProduct>
                   },
                   {
                         path:'/addproduct',
