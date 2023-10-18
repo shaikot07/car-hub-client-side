@@ -1,4 +1,5 @@
 import React from 'react';
+import Swal from 'sweetalert2';
 
 const AddProduct = () => {
 
@@ -10,10 +11,38 @@ const AddProduct = () => {
                   const brandName=form.brand_name.value;
                   const type = form.type.value;
                   const price = form.price.value;
-                  const shortDescription=form.short_description;
+                  const shortDescription = form.short_description.value;
                   const rating = form.rating.value;
                   const newProduct={name,image,brandName,type,price,shortDescription,rating,}
                   console.log(newProduct);
+                  fetch('http://localhost:5000/product',{
+                        method: 'POST',
+                        headers:{
+                              'content-type': 'application/json'
+                        },
+                        body: JSON.stringify(newProduct)
+                  })
+                        .then(res=>res.json())
+                        .then(data =>{
+                              console.log(data);
+                              if (data.insertedId) {
+                                    Swal.fire({
+                                          title: 'success!',
+                                          text: 'Coffee added Successfully',
+                                          icon: 'success',
+                                          confirmButtonText: 'Cool'
+                                    })
+                                    form.reset()
+                              }
+                              else {
+                                    Swal.fire({
+                                          title: 'error!',
+                                          text: 'Coffee do not added',
+                                          icon: 'error',
+                                          confirmButtonText: 'Try Agin'
+                                    })
+                              }
+                        })
       }
       return (
             <div className='max-w-6xl mx-auto mt-14 mb-5'>
