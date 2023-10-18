@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { FaGoogle,FaSquareGithub } from "react-icons/fa6";
+import { FaGoogle,} from "react-icons/fa6";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import app from "../../firebase/firebase.config";
@@ -14,6 +14,7 @@ const Register = () => {
       const auth = getAuth(app)
       const [showError, setShowError] = useState('')
       const [success,setSuccess] = useState('')
+      console.log(success);
       const navigate = useNavigate()
 
 
@@ -33,10 +34,9 @@ const Register = () => {
             else if(!/[!@#$%^&*()_+{}[\]:;<>,.?~\\-]/.test(password)){
                   return  setShowError('password should be at lest 1 special charters');
             }
-            createUser(email,password,) 
+            createUser(email,password) 
                   .then(res =>{
                         setSuccess('Account Create Successfully!',)
-                       
                         navigate('/')
                   })
                   .catch(error =>{

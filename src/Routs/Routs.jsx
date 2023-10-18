@@ -9,6 +9,7 @@ import Register from '../Pages/Register/Register';
 import Mycart from '../Pages/mycart/Mycart';
 import PrivateRoute from './PrivateRoute';
 import ErrorPage from '../Sheard/ErrorPage';
+import BrandDetails from '../Pages/Home/Brand-info/BrandDetails';
 
 const router = createBrowserRouter([
       {
@@ -18,7 +19,13 @@ const router = createBrowserRouter([
             children:[
                   {
                         path:'/',
-                        element:<Home></Home>
+                        element:<Home></Home>,
+                        loader: ()=> fetch('/data.json')
+                        
+                  },
+                  {
+                        path:'/branddetails/:id',
+                        element:<BrandDetails></BrandDetails>
                   },
                   {
                         path:'/addproduct',
