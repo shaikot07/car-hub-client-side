@@ -6,7 +6,7 @@ const BrandDetails = () => {
       const { id } = useParams()
       const [loading, setLoading] = useState(true)
       const [product, setProduct] = useState([]);
-      console.log(product);
+      // console.log(product);
 
       useEffect(() => {
             fetch('http://localhost:5000/product')

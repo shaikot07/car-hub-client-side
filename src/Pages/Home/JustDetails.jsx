@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ImStarFull } from 'react-icons/im';
 import { Link, useParams } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const JustDetails = () => {
 
@@ -8,8 +9,9 @@ const JustDetails = () => {
       const [loading, setLoading] = useState(true)
       const [product, setProduct] = useState([]);
       // console.log(product);
-      const {brandName, image, name, price, rating, shortDescription, type }=product
-
+      const { _id, brandName, image, name, price, rating, shortDescription, type } = product
+      const addCart = { _id, brandName, image, name, price, rating, shortDescription, type }
+      // console.log(addCart);
       useEffect(() => {
             fetch('http://localhost:5000/product')
                   .then(res => res.json())
@@ -24,9 +26,41 @@ const JustDetails = () => {
                   })
 
       }, [])
+
+      const handleAddToCart = () => {
+            fetch(`http://localhost:5000/cart`, {
+                  method: 'POST',
+                  headers: {
+                        'content-type': 'application/json'
+                  },
+                  body: JSON.stringify(addCart)
+            })
+                  .then(res => res.json())
+                  .then(data => {
+                        console.log(data);
+                        if (data.insertedId) {
+                              Swal.fire({
+                                    title: 'success!',
+                                    text: 'Add to cart Successfully',
+                                    icon: 'success',
+                                    confirmButtonText: 'Cool'
+                              })
+                              setLoading(false)
+
+                        }
+                        else {
+                              Swal.fire({
+                                    title: 'error!',
+                                    text: 'Cart do not added',
+                                    icon: 'error',
+                                    confirmButtonText: 'Try Agin'
+                              })
+                        }
+                  })
+      }
       return (
             <div className='mt-[100px] mb-[100px]'>
-                 
+
 
                   <div className="card card-compact w-1/2 mx-auto bg-pink-200 shadow-xl">
                         <figure><img className='w-full' src={image} alt="Shoes" /></figure>
@@ -38,10 +72,12 @@ const JustDetails = () => {
                               <h2 className="card-title font-bold">Price: $ {price}</h2>
                               <p>{shortDescription}</p>
                               <div className="card-actions justify-center mt-12">
-                                   <Link to="/">
-                                   <button className="btn btn-primary bg-pink-500">Go to Home</button>
-                                   </Link>
-                                   <button className="btn btn-primary bg-pink-500">Go to Home</button>
+                                    <Link to="/">
+                                          <button className="btn btn-primary bg-pink-500">Go to Home</button>
+                                    </Link>
+                                    <button onClick={handleAddToCart} className="btn btn-primary bg-pink-500">
+                                          Add to Cart
+                                    </button>
                               </div>
                         </div>
                   </div>
