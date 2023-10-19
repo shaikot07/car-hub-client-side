@@ -1,10 +1,49 @@
 import React from 'react';
 import { ImStarFull } from 'react-icons/im';
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const MyCardDetails = ({ product }) => {
-      console.log(product);
+      // console.log(product);
       const { _id, brandName, image, name, price, rating, shortDescription, type } = product || {}
+
+
+      const handleDelete = (_id) => {
+            console.log(_id);
+            Swal.fire({
+                  title: 'Are you sure?',
+                  text: "You won't be able to revert this!",
+                  icon: 'warning',
+                  showCancelButton: true,
+                  confirmButtonColor: '#3085d6',
+                  cancelButtonColor: '#d33',
+                  confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                  if (result.isConfirmed) {
+
+                        console.log('delete confrm');
+                        fetch(`http://localhost:5000/cart/${_id}`, {
+                              method: 'DELETE'
+                        })
+                              .then(res => res.json())
+                              .then(data => {
+                                    console.log('this is ds', data);
+                                    if (data.deletedCount > 0) {
+                                          Swal.fire(
+                                                'Deleted!',
+                                                'Your file has been deleted.',
+                                                'success'
+                                          )
+                                          // const remaining =products.filter(item =>item._id !== _id);
+                                          // setProducts(remaining)
+                                    }
+                              }).catch(error => {
+                                    console.log(error);
+                              })
+                  }
+            })
+      }
+
       return (
             <div>
 
@@ -29,15 +68,16 @@ const MyCardDetails = ({ product }) => {
 
                         </div>
                         <div className="p-6 pt-0">
-                              <Link to={`/details/${_id}`}>
-                                    <button
-                                          className="select-none rounded-lg bg-pink-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                                          type="button"
-                                          data-ripple-light="true"
-                                    >
-                                         Remove To Cart
-                                    </button>
-                              </Link>
+
+                              <button
+                                    onClick={() => handleDelete(_id)}
+                                    className="select-none rounded-lg bg-pink-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                    type="button"
+                                    data-ripple-light="true"
+                              >
+                                    Remove To Cart
+                              </button>
+
 
                         </div>
                   </div>

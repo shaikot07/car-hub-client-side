@@ -10,7 +10,7 @@ const JustDetails = () => {
       const [product, setProduct] = useState([]);
       // console.log(product);
       const { _id, brandName, image, name, price, rating, shortDescription, type } = product
-      const addCart = { _id, brandName, image, name, price, rating, shortDescription, type }
+      const addCart = { productId:_id, brandName, image, name, price, rating, shortDescription, type }
       // console.log(addCart);
       useEffect(() => {
             fetch('http://localhost:5000/product')
