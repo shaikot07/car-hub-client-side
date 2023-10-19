@@ -41,6 +41,7 @@ const JustDetails = () => {
                                    <Link to="/">
                                    <button className="btn btn-primary bg-pink-500">Go to Home</button>
                                    </Link>
+                                   <button className="btn btn-primary bg-pink-500">Go to Home</button>
                               </div>
                         </div>
                   </div>

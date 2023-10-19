@@ -1,10 +1,13 @@
 import React, { useContext } from 'react';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import { useLoaderData } from 'react-router-dom';
 
 const UpdateProduct = () => {
       const {user}=useContext(AuthContext)
-
+      const product = useLoaderData();
+      const { _id, brandName, image, name, price, rating, shortDescription, type}=product || {}
+      // console.log(product);
       const handleUpdateProduct = (event) => {
             event.preventDefault();
             const form = event.target;
@@ -15,19 +18,19 @@ const UpdateProduct = () => {
             const price = form.price.value;
             const shortDescription = form.short_description.value;
             const rating = form.rating.value;
-            const newProduct = { name, image, brandName, type, price, shortDescription, rating, email:user.email}
-            console.log(newProduct);
-            fetch('http://localhost:5000/product', {
-                  method: 'POST',
+            const updateProduct = { name, image, brandName, type, price, shortDescription, rating, email:user.email}
+            console.log(updateProduct);
+            fetch(`http://localhost:5000/product/${_id}`, {
+                  method: 'PUT',
                   headers: {
                         'content-type': 'application/json'
                   },
-                  body: JSON.stringify(newProduct)
+                  body: JSON.stringify(updateProduct)
             })
                   .then(res => res.json())
                   .then(data => {
                         console.log(data);
-                        if (data.insertedId) {
+                        if (data.modifiedCount > 0) {
                               Swal.fire({
                                     title: 'success!',
                                     text: 'Product Update Successfully',
@@ -58,13 +61,13 @@ const UpdateProduct = () => {
                                                       <label className="label">
                                                             <span className="label-text">Image</span>
                                                       </label>
-                                                      <input type="text" placeholder="image URL" name='image' className="input input-bordered" required />
+                                                      <input type="text" placeholder="image URL" name='image' defaultValue={image} className="input input-bordered" required />
                                                 </div>
                                                 <div className="form-control">
                                                       <label className="label">
                                                             <span className="label-text">Name</span>
                                                       </label>
-                                                      <input type="text" placeholder="Name" name='name' className="input input-bordered" required />
+                                                      <input type="text" placeholder="Name" name='name' defaultValue={name} className="input input-bordered" required />
                                                 </div>
                                           </div>
                                           <div className='flex gap-8'>
@@ -72,13 +75,13 @@ const UpdateProduct = () => {
                                                       <label className="label">
                                                             <span className="label-text">Brand Name</span>
                                                       </label>
-                                                      <input type="text" placeholder="Brand Name" name='brand_name' className="input input-bordered" required />
+                                                      <input type="text" placeholder="Brand Name" name='brand_name' defaultValue={brandName} className="input input-bordered" required />
                                                 </div>
                                                 <div className="form-control">
                                                       <label className="label">
                                                             <span className="label-text">Type</span>
                                                       </label>
-                                                      <input type="text" placeholder="type" name='type' className="input input-bordered" required />
+                                                      <input type="text" placeholder="type" name='type' defaultValue={type} className="input input-bordered" required />
                                                 </div>
                                           </div>
                                           <div className='flex gap-8'>
@@ -86,20 +89,20 @@ const UpdateProduct = () => {
                                                       <label className="label">
                                                             <span className="label-text">Price</span>
                                                       </label>
-                                                      <input type="number" placeholder="price" name='price' className="input input-bordered" required />
+                                                      <input type="number" placeholder="price" name='price' defaultValue={price} className="input input-bordered" required />
                                                 </div>
                                                 <div className="form-control">
                                                       <label className="label">
                                                             <span className="label-text">Short description</span>
                                                       </label>
-                                                      <input type="text" placeholder="Short description" name='short_description' className="input input-bordered" required />
+                                                      <input type="text" placeholder="Short description" name='short_description' defaultValue={shortDescription} className="input input-bordered" required />
                                                 </div>
                                           </div>
                                           <div className="form-control w-1/2">
                                                 <label className="label">
                                                       <span className="label-text">Rating</span>
                                                 </label>
-                                                <input type="text" placeholder="Rating" name='rating' className="input input-bordered" required />
+                                                <input type="text" placeholder="Rating" name='rating' defaultValue={rating} className="input input-bordered" required />
                                           </div>
 
                                           <div className="form-control mt-6 w-[480px]">
