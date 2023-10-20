@@ -31,12 +31,12 @@ const router = createBrowserRouter([
                   },
                   {
                         path:'/details/:id',
-                        element:<JustDetails></JustDetails>
+                        element:<PrivateRoute><JustDetails></JustDetails></PrivateRoute>,
                   },
                   {
                         path:'/updateproduct/:id',
-                        element:<UpdateProduct></UpdateProduct>,
-                        loader:({params})=> fetch(`http://localhost:5000/product/${params.id}`)
+                        element:<PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
+                        loader:({params})=> fetch(`https://assignment-10-backend-side-15nojv0iz-shaikats-projects.vercel.app/product/${params.id}`)
                   },
                   {
                         path:'/addproduct',
@@ -44,8 +44,8 @@ const router = createBrowserRouter([
                   },
                   {
                         path:'/mycart',
-                        element:<Mycart></Mycart>,
-                        loader:()=> fetch('http://localhost:5000/cart')
+                        element:<PrivateRoute><Mycart></Mycart></PrivateRoute>,
+                        loader:()=> fetch('https://assignment-10-backend-side-15nojv0iz-shaikats-projects.vercel.app/cart')
                   },
                   {
                         path:'/login',

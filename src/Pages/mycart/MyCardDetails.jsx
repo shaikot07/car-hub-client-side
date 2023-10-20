@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ImStarFull } from 'react-icons/im';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
-const MyCardDetails = ({ product }) => {
+const MyCardDetails = ({ product,setProducts,products }) => {
       // console.log(product);
       const { _id, brandName, image, name, price, rating, shortDescription, type } = product || {}
-
+      const [control,setControl]=useState(true)
 
       const handleDelete = (_id) => {
             console.log(_id);
@@ -22,7 +22,7 @@ const MyCardDetails = ({ product }) => {
                   if (result.isConfirmed) {
 
                         console.log('delete confrm');
-                        fetch(`http://localhost:5000/cart/${_id}`, {
+                        fetch(`https://assignment-10-backend-side-15nojv0iz-shaikats-projects.vercel.app/cart/${_id}`, {
                               method: 'DELETE'
                         })
                               .then(res => res.json())
@@ -34,7 +34,9 @@ const MyCardDetails = ({ product }) => {
                                                 'Your file has been deleted.',
                                                 'success'
                                           )
+                                          setControl(!control)
                                           // const remaining =products.filter(item =>item._id !== _id);
+                                          // console.log(remaining);
                                           // setProducts(remaining)
                                     }
                               }).catch(error => {

@@ -16,7 +16,9 @@ const Home = () => {
 
                         <div className='grid sm:grid-cols-1 md:grid-cols-3 ml-[50px] gap-6'>
                               {
-                                    data.map(cdata => <BrandCart key={cdata.id} cdata={cdata}></BrandCart>)
+                                   data.map(cdata => <BrandCart key={cdata.id} cdata={cdata}></BrandCart>)
+                                    
+                                    
                               }
                         </div>
                         {/* pre Booking section */}

@@ -9,7 +9,7 @@ const BrandDetails = () => {
       // console.log(product);
 
       useEffect(() => {
-            fetch('http://localhost:5000/product')
+            fetch('https://assignment-10-backend-side-15nojv0iz-shaikats-projects.vercel.app/product')
                   .then(res => res.json())
                   .then((data) => {
                         // console.log(data);
@@ -59,7 +59,9 @@ const BrandDetails = () => {
                   
                   <div className='grid sm:grid-cols-1 md:grid-cols-3 gap-3'>
                         {
-                              product.map((products ,ind)=> <BrandDetailsCard key={ind} products={products}></BrandDetailsCard>)
+                              product.length > 0 ?  product.map((products ,ind)=> <BrandDetailsCard key={ind} products={products}></BrandDetailsCard>)
+                              : <h2 className='text-4xl text-pink-600 text-center mt-10 mb-10'>Data Not Available For This Brand</h2>
+                             
                         }
                   </div>
 

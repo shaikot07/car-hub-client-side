@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const BrandCart = ({ cdata }) => {
-      // console.log(cdata);
+      console.log(cdata);
       const { id, brand_name, image } = cdata
       return (
             <Link  to={`/branddetails/${brand_name}`}>

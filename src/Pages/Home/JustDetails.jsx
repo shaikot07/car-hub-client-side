@@ -13,7 +13,7 @@ const JustDetails = () => {
       const addCart = { productId:_id, brandName, image, name, price, rating, shortDescription, type }
       // console.log(addCart);
       useEffect(() => {
-            fetch('http://localhost:5000/product')
+            fetch('https://assignment-10-backend-side-15nojv0iz-shaikats-projects.vercel.app/product')
                   .then(res => res.json())
                   .then((data) => {
                         // console.log(data);
@@ -28,7 +28,7 @@ const JustDetails = () => {
       }, [])
 
       const handleAddToCart = () => {
-            fetch(`http://localhost:5000/cart`, {
+            fetch(`https://assignment-10-backend-side-15nojv0iz-shaikats-projects.vercel.app/cart`, {
                   method: 'POST',
                   headers: {
                         'content-type': 'application/json'

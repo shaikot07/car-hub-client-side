@@ -30,7 +30,7 @@ const Navebar = () => {
                                           {links}
                                     </ul>
                               </div>
-                              <a className="btn btn-ghost normal-case text-xl">CarShop</a>
+                              <a className="btn btn-ghost normal-case text-xl text-pink-600">CarHuB</a>
                         </div>
                         <div className="navbar-center hidden lg:flex">
                               <ul className="menu menu-horizontal px-1">

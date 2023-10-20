@@ -1,8 +1,11 @@
-# React + Vite
+my site name is CarHub now i tell something about my site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+* i implement firebase auth  for register new account with email and password
+*login with vialed email and password  if you  give wrong password or email you don't access 
+*i also implement privet route if  you are not login site you can't goto other route
+*its fully mobile responsive.
 
-Currently, two official plugins are available:
+*when you press add to cart button . data will be save the  mongo db data base
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+SITE LIVE LINK: https://assignment-10-clint-side.netlify.app/ 
