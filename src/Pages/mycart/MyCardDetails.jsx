@@ -6,7 +6,7 @@ import Swal from 'sweetalert2';
 const MyCardDetails = ({ product,setProducts,products }) => {
       // console.log(product);
       const { _id, brandName, image, name, price, rating, shortDescription, type } = product || {}
-      const [control,setControl]=useState(true)
+      // const [control,setControl]=useState(true)
 
       const handleDelete = (_id) => {
             console.log(_id);
@@ -34,10 +34,10 @@ const MyCardDetails = ({ product,setProducts,products }) => {
                                                 'Your file has been deleted.',
                                                 'success'
                                           )
-                                          setControl(!control)
-                                          // const remaining =products.filter(item =>item._id !== _id);
+                                          // setControl(!control)
+                                          const remaining =products.filter(item =>item._id !== _id);
                                           // console.log(remaining);
-                                          // setProducts(remaining)
+                                          setProducts(remaining)
                                     }
                               }).catch(error => {
                                     console.log(error);
