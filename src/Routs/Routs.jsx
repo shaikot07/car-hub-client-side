@@ -45,7 +45,7 @@ const router = createBrowserRouter([
                   {
                         path:'/mycart',
                         element:<PrivateRoute><Mycart></Mycart></PrivateRoute>,
-                        loader:()=> fetch('https://assignment-10-backend-side-15nojv0iz-shaikats-projects.vercel.app/cart')
+                  
                   },
                   {
                         path:'/login',

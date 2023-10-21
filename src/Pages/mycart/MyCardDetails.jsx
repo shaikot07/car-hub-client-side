@@ -3,10 +3,10 @@ import { ImStarFull } from 'react-icons/im';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
-const MyCardDetails = ({ product,setProducts,products }) => {
+const MyCardDetails = ({ product,setControl,control}) => {
       // console.log(product);
       const { _id, brandName, image, name, price, rating, shortDescription, type } = product || {}
-      // const [control,setControl]=useState(true)
+      
 
       const handleDelete = (_id) => {
             console.log(_id);
@@ -27,18 +27,18 @@ const MyCardDetails = ({ product,setProducts,products }) => {
                         })
                               .then(res => res.json())
                               .then(data => {
-                                    console.log('this is ds', data);
                                     if (data.deletedCount > 0) {
                                           Swal.fire(
                                                 'Deleted!',
                                                 'Your file has been deleted.',
                                                 'success'
                                           )
-                                          // setControl(!control)
-                                          const remaining =products.filter(item =>item._id !== _id);
-                                          // console.log(remaining);
-                                          setProducts(remaining)
+                                          
+                                          // const remaining =products.filter(item =>item._id !== _id);
+                                          // // console.log(remaining);
+                                          // setProducts(remaining)
                                     }
+                                    setControl(!control)
                               }).catch(error => {
                                     console.log(error);
                               })
